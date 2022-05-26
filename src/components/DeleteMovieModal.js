@@ -1,12 +1,19 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-const DeleteMovieModal = () => {
+const DeleteMovieModal = props => {
+
+    const { movie } = props;
+
+
+    const { id } = useParams();
+
     return (<div id="deleteEmployeeModal">
         <div className="modal-dialog">
             <div className="modal-content">
                 <form>
                     <div className="modal-header">						
-                        <h4 className="modal-title">Delete Employee</h4>
+                        <h4 className="modal-title">Delete Movie</h4>
                         <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div className="modal-body">					
